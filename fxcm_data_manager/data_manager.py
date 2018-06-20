@@ -5,6 +5,8 @@ __author__ = "mithun manohar:mithunmanohar79[at]gmail[dot]com"
 A command line interface for managing fxcm mysql data base
 """
 import argparse
+from source import data_handler
+
 
 
 if __name__ == "__main__":
@@ -29,4 +31,6 @@ if __name__ == "__main__":
                         help="adds a new time frame to database. eg usage:\
                         data_manager.py --add_time_frame D1")
 
-    cmd_args = parser.parse_args()
+    cmd_line_args = parser.parse_args()
+
+    data_manager.process_inputs(cmd_line_args)
