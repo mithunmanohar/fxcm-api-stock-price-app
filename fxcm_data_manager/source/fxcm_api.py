@@ -1,25 +1,27 @@
 # -*- coding: utf-8 -*-
+# Global imports
+
+import warnings
+warnings.filterwarnings("ignore")
+import sys
+import datetime as dt
+
 try:
-    import warnings
-    warnings.filterwarnings("ignore")
-    import sys
     import fxcmpy
-    import ConfigParser
-    import datetime as dt
-    import database as db
+    from source.database import Database
 except ImportError as e:
-    print ('-----', e)
+    print ("[EXCEPTION] %s" % e)
 
 
 class Fxcm:
     def __init__(self):
-        print ("inint")
-        self.api_conn = fxcmpy.fxcmpy(config_file='fxcm.cfg', server='demo')
+
+        #self.api_conn = fxcmpy.fxcmpy(config_file='..\\fxcm.cfg', server='demo')
         print ("got con")
-        print (self.api_conn.get_candles('GBP/JPY', period='D1',start= dt.datetime(2016, 1, 1),end = dt.datetime(2018, 6, 10)))
-        self.db_conn = db.
+        #print (self.api_conn.get_candles('GBP/JPY', period='D1',start= dt.datetime(2016, 1, 1),end = dt.datetime(2018, 6, 10)))
+        self.db_conn = Database()
         #self.currency_pairs =
-        sys.exit(1)
+
     def process_inputs(p_args):
         """Processes the command line arguments and call the required function"""
 

@@ -5,7 +5,8 @@ __author__ = "mithun manohar:mithunmanohar79[at]gmail[dot]com"
 A command line interface for managing fxcm mysql data base
 """
 import argparse
-from source import data_handler
+import logging
+from source.data_handler import Fxcm
 
 
 
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     parser.add_argument("-show_currency_pairs", action="store_true",
                         help="shows all the currency pairs in database")        # if  -show_currency_pairs is used, a True flag is set
 
-    parser.add_argument("-show_time_frames", action="store_true",
+    parser.add_argument("-show_timeframes", action="store_true",
                         help="shows all the available time frames in database")
 
     parser.add_argument("-update_all_data", action="store_true",
@@ -32,5 +33,6 @@ if __name__ == "__main__":
                         data_manager.py --add_time_frame D1")
 
     cmd_line_args = parser.parse_args()
+    data_handler = Fxcm()
 
-    data_manager.process_inputs(cmd_line_args)
+    data_handler.process_inputs(cmd_line_args)
