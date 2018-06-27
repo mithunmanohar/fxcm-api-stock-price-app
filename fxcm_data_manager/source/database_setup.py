@@ -39,6 +39,7 @@ def create_currency_table(table_name):
     else:
         print("[INFO] Table %s exists already" % table_name)
 
+
 def create_tf_record_table(table_name):
     db = Database(database)
     query = ("""SELECT * FROM
@@ -76,7 +77,7 @@ def create_tf_tables(table_name):
         else:
             print("[INFO] Unable to create table %s" % table_name)
     else:
-        print ("[INFO] Table already exists")
+        print("[INFO] Table already exists")
 
 if __name__ == "__main__":
     db = Database()

@@ -33,6 +33,21 @@ class Fxcm:
             c_pairs.append(each["currency_pair"])
         return c_pairs
 
+    def add_time_frame(self, table_name):
+        query = ("""SELECT * FROM
+                t_timeframes
+                WHERE
+                time_frame = '%s'""") % table_name
+        if self.db_conn.run_query(query):
+            print("[INFO] Table already exists %s" % table_name)
+        else:
+            query = ("""INSERT INTO t_timeframes 
+                        (time_frame) VALUES
+                        ('%s')""") % table_name
+            return table_name
+
+
+
     def show_time_frames(self):
         query = """select time_frame from t_timeframes"""
         data = self.db_conn.run_query(query)
@@ -43,11 +58,6 @@ class Fxcm:
 
     def update_all_data(self):
         pass
-
-    def add_time_frame(self):
-        pass
-
-
 
     def process_inputs(self, p_args):
         """Processes the command line arguments and call the required function"""
@@ -62,5 +72,8 @@ class Fxcm:
             print("Currently available timeframes are  : %s" % self.show_time_frames())
         elif p_args.update_all_data:
             print()
+
+        elif p_args.add_time_frame:
+            print("Added timeframes : %s" % self.add_time_frame(p_args.add_time_frame))
         else:
             "print ([WARNING: Invalid arguments])"
