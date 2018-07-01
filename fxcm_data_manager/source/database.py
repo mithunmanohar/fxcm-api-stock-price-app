@@ -31,8 +31,8 @@ class Database:
             self.connection.commit()
             return True
         except Exception as e:
-            print (query)
-            print (traceback.print_exc())
+            print(query)
+            print(traceback.print_exc())
             self.connection.rollback()
             return False
 

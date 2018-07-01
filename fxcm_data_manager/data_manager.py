@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-__author__ = "mithun manohar:mithunmanohar79[at]gmail[dot]com"
+__author__ = "samrohn77[at]gmail[dot]com"
 
 """
 A command line interface for managing fxcm mysql data base
 """
+
+import sys
 import argparse
 import logging
 from source.data_handler import Fxcm
@@ -17,10 +19,10 @@ if __name__ == "__main__":
     parser.add_argument("-show_currency_pairs", action="store_true",
                         help="shows all the currency pairs in database")        # if  -show_currency_pairs is used, a True flag is set
 
-    parser.add_argument("-show_timeframes", action="store_true",
+    parser.add_argument("-show_time_frames", action="store_true",
                         help="shows all the available time frames in database")
 
-    parser.add_argument("-update_all_data", action="store_true",
+    parser.add_argument("--update_all", action="store_true",
                         help="updates the database with latest data for all\
                         the currency pairs for all the time frames")
 
@@ -31,8 +33,11 @@ if __name__ == "__main__":
     parser.add_argument("--add_time_frame",
                         help="adds a new time frame to database. eg usage:\
                         data_manager.py --add_time_frame D1")
-
+    parser.add_argument("-reset_all", action="store_true",
+                        help="resets the entire database\
+                        data_manager.py -reset_all")
     cmd_line_args = parser.parse_args()
     data_handler = Fxcm()
 
     data_handler.process_inputs(cmd_line_args)
+    # sys.exit(0)
