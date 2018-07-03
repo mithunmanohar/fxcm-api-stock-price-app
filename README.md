@@ -10,7 +10,9 @@ data_manager.py -show_currency_pairs  - shows all the currency pairs in the data
 
 data_manager.pt -show_time_frames   - shows all the timeframes in the database
 
-data_manager.py -reset_all - Wipes out the database, all the tables, data and resets to default state. Run  detabase_setup.py file to recreate the database and tables
+data_manager.py -reset_all - Wipes out the database, all the tables, data and resets to default state. 
+
+Run  detabase_setup.py file to recreate the database and tables
 
 data_manager.py --add_currency_pair	{currency pair name}  - add a new currency to the database
 
