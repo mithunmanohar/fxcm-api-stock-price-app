@@ -75,7 +75,7 @@ def create_tf_record_table(table_name):
     if not db.run_query(query):
         query = """CREATE TABLE %s (
                    id int(11) NOT NULL AUTO_INCREMENT,
-                   time_frame VARCHAR(100),
+                   time_frame VARCHAR(100) ,
                    primary key (id)
                    )""" % table_name
         if db.execute_query(query):
@@ -94,7 +94,7 @@ def create_tf_tables(table_name):
                 table_name = '%s'""") % table_name
     if not db.run_query(query):
         query = """CREATE TABLE %s (
-               currency_pair VARCHAR(100),date_time DATETIME,bidopen float(8,3),\
+               currency_pair VARCHAR(100),date_time DATETIME UNIQUE,bidopen float(8,3),\
                bidclose float(8,3), bidhigh float(8,3), bidlow float(8,3),\
                askopen float(8,3), askclose  float(8,3), askhigh float(8,3),\
                asklow float(8,3), tickqty int(12))""" % table_name

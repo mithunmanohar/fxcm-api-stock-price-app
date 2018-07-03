@@ -11,7 +11,6 @@ import logging
 from source.data_handler import Fxcm
 
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='A command line utility to\
                                       pull fxcm api data to mysql database')
@@ -40,4 +39,3 @@ if __name__ == "__main__":
     data_handler = Fxcm()
 
     data_handler.process_inputs(cmd_line_args)
-    # sys.exit(0)

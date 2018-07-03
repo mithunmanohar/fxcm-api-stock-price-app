@@ -25,6 +25,9 @@ class Database:
                                               self.password)
         self.cursor = self.connection.cursor()
 
+    def get_con(self):
+        return self.connection
+
     def execute_query(self, query):
         try:
             self.cursor.execute(query)

@@ -12,14 +12,26 @@ coin_name not null
 data_m1_tf
 
 
-data_manager.py --show_currency_pair  - shows all the currency pairs in the database
-data_manager.pt --show_time_frames   - shows all the timeframes in the database
+data_manager.py --show_currency_pairs  - shows all the currency pairs in the database
+data_manager.pt --show_timeframes   - shows all the timeframes in the database
 
-data_manager.py --	={coin_pair}  - add a new currency to the database
-data_managerpy --add_time_frame=time_frame_name  - adds a new time frame to database
+data_manager.py --add_currency_pair	{currency pair name}  - add a new currency to the database
+data_managerpy --add_time_frame {time_frame_name}  - adds a new time frame to database
 
 
 
 data_manager.py --update_all_data - Updates all the data in the data base for all time-periods and currency pairs with latest available data
 data_manager.py --update_currency_pair {coin_pair} - updates historical data for the given coin in all time-period tables
 
+
+
+                     bidopen  bidclose  bidhigh   bidlow  askopen  askclose askhigh   asklow  tickqty  
+
+
+ 'access_token', 'account_ids', 'add_callbacks', 'add_to_oco', 'bearer_token', 'change_order', 'change_order_stop_limit', 'change_trade_stop_limit', 'close', 'close_all', 'close_all_for_symbol', 'close_trade', 'closed_pos', 'config_file', 'connect', 'connection_status', 'create_entry_order', 'create_market_buy_order', 'create_market_sell_order', 'create_oco_order', 'debug', 'default_account', 'delete_order', 'edit_oco', 'get_account_ids', 'get_accounts', 'get_accounts_summary', 'get_all_trade_ids', 'get_candles', 'get_closed_position', 'get_closed_positions', 'get_closed_positions_summary', 'get_closed_trade_ids', 'get_default_account', 'get_instruments', 'get_instruments_for_candles', 'get_last_price', 'get_max_prices', 'get_model', 'get_oco_order', 'get_oco_order_ids',
+
+
+  'get_offers', 'get_open_position', 'get_open_positions', 'get_open_positions_summary', 'get_open_trade_ids', 'get_order', 'get_order_ids', 'get_orders', 'get_prices', 'get_subscribed_symbols', 'get_summary', 'instruments', 'is_connected', 'is_subscribed', 'logger', 'max_prices', 'models', 'oco_orders', 'offers', 'old_orders', 'open_pos', 'open_trade', 'orders', 'port', 'prices', 'remove_from_oco', 'request_header', 'request_headers', 'set_default_account', 'set_max_prices', 'socket', 'socket_id', 'socket_thread', 'subscribe_data_model', 'subscribe_market_data', 'trading_url', 'unsubscribe_data_model', 'unsubscribe_market_data'
+
+
+ 'EUR/USD', 'XAU/USD', 'GBP/USD', 'UK100', 'USDOLLAR', 'XAG/USD', 'GER30', 'FRA40', 'USD/CNH', 'EUR/JPY', 'USD/JPY', 'CHN50', 'GBP/JPY', 'AUD/JPY', 'CHF/JPY', 'USD/CHF', 'GBP/CHF', 'AUD/USD', 'EUR/AUD', 'EUR/CHF', 'EUR/CAD', 'EUR/GBP', 'AUD/CAD', 'NZD/USD', 'USD/CAD', 'CAD/JPY', 'GBP/AUD', 'NZD/JPY', 'US30', 'GBP/CAD', 'SOYF', 'GBP/NZD', 'AUD/NZD', 'USD/SEK', 'EUR/SEK', 'EUR/NOK', 'USD/NOK', 'USD/MXN', 'AUD/CHF', 'EUR/NZD', 'USD/ZAR', 'USD/HKD', 'ZAR/JPY', 'USD/TRY', 'EUR/TRY', 'NZD/CHF', 'CAD/CHF', 'NZD/CAD', 'TRY/JPY', 'AUS200', 'ESP35', 'HKG33', 'JPN225', 'NAS100', 'SPX500', 'Copper', 'EUSTX50', 'USOil', 'UKOil', 'NGAS', 'Bund']
