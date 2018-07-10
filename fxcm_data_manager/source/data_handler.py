@@ -110,18 +110,32 @@ class Fxcm:
         currency_pairs = self.get_currency_pairs()
         timeframes = self.get_time_frames()
         for currency_pair in currency_pairs:
-            for timeframe in timeframes:
-                now = dt.datetime.now()
-                strt = dt.datetime(2018, 1, 1)
-                query = """select date_time from %s where currency_pair='%s' order by date_time desc limit 1""" % (timeframe, currency_pair)
-                date_ = self.db_conn.run_query(query)
-                if date_:
-                    strt = date_[0]['date_time']# dt.datetime.strptime(date_[0]['date_time'], '%Y-%d-%m %H:%m:%S')
+            try:
+                for timeframe in timeframes:
+                    try:
+                        now = dt.datetime.now()
+                        strt = dt.datetime(2018, 1, 1)
+                        query = """select date_time from %s where currency_pair='%s' order by date_time desc limit 1""" % (timeframe, currency_pair)
+                        date_ = self.db_conn.run_query(query)
+                        if date_:
+                            strt = date_[0]['date_time']# dt.datetime.strptime(date_[0]['date_time'], '%Y-%d-%m %H:%m:%S')
 
-                endd = dt.datetime(now.year, now.month, now.day)
-                ts_data = api_conn.get_candles(currency_pair, start=strt, end=endd, period=timeframe)
-                self.update_database(currency_pair, timeframe, ts_data)
-
+                        endd = dt.datetime(now.year, now.month, now.day)
+                        try:
+                            ts_data = api_conn.get_candles(currency_pair, start=strt, end=endd, period=timeframe)
+                            self.update_database(currency_pair, timeframe, ts_data)
+                        except Exception as e:
+                            print("[ERROR] Error occured. Resetting api connection %s" % e)
+                            try:
+                                api_conn = fxcmpy.fxcmpy(config_file=".\\fxcm.cfg", log_level='error', server='real')
+                                continue
+                            except:
+                                api_conn = fxcmpy.fxcmpy(config_file=".\\fxcm.cfg", log_level='error', server='real')
+                                continue
+                    except Exception as e:
+                        continue
+            except Exception as e:
+                continue
 
     def reset_database(self):
         query = """DROP database fxcm"""
@@ -146,4 +160,4 @@ class Fxcm:
         else:
             "print ([WARNING: Invalid arguments])"
 
-# l = Fxcm().update_all_data()
+l = Fxcm().update_all_data()
