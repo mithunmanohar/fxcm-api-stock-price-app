@@ -9,9 +9,11 @@ After installing Mysql Database, run the database_setup.py file. This creates th
 #Usage of the command line options
 
 - TO show all the currency pairs in the database
+
   python.exe data_manager.py -show_currency_pairs  - 
 
 - To show all the timeframes in the database
+
   python.exe data_manager.pt -show_time_frames
 
 - Reset database, all the tables, data and resets to default state. Sets everything to default state!
@@ -21,27 +23,34 @@ After installing Mysql Database, run the database_setup.py file. This creates th
 Re-run  detabase_setup.py file to recreate the database and tables
 
 - To add a new currency to the database
+
   python.exe data_manager.py --add_currency_pair	{currency pair name}
   
 - To add a  new time frame to database
+
   python.exe data_managerpy --add_time_frame {time_frame_name}
 
 - Update all data for all time frames and currency pairs
+
   python.exe data_manager.py --update_all_data 
 
 Custom updates:  
 Use these methods to update individual timeframe and currency pair
 
 - To update one time frame one time frame : 
+
   python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25"
 
 - To update one time frame, multiple currecy pair: 
+
   python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD,XAG/USD" --s_d "2018-02-25" --e_d "2018-03-25"
 
 - To update  multiple time frame, one currecy pair:
+
   python.exe data_manager.py --update --t_f "m15,H4" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25"
 
 - To update multiple time frame, multiple currency:
+
   python.exe data_manager.py --update --t_f "m15,H4" --c_p "NZD/USD,GBP/USD" --s_d "2018-02-25" --e_d "2018-03-25"
 
 
