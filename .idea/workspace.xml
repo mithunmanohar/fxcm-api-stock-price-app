@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f76f35c0-c8e5-4667-9a29-10b8dd6b378e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/fxcm_data_manager/source/fxcm.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxcm_data_manager/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/data_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxcm_data_manager/fxcm.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/fxcm.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxcm_data_manager/how_to.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/how_to.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxcm_data_manager/source/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/source/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,28 +22,29 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="data_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fxcm_data_manager/data_manager.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-781">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-              <folding>
-                <element signature="e#64#75#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_handler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <element signature="e#41#60#0" expanded="true" />
+                <element signature="e#41#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,14 +52,18 @@
       </file>
       <file leaf-file-name="fxcm_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/fxcm_api.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="21" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="database_setup.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database_setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2684">
-              <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+            <state relative-caret-position="333">
+              <caret line="128" column="44" lean-forward="true" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
               <folding>
                 <element signature="e#43#57#0" expanded="true" />
               </folding>
@@ -74,6 +85,8 @@
       <find>get_instruments</find>
       <find>sys</find>
       <find>t_timeframes</find>
+      <find>CREATE</find>
+      <find>updating data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,19 +99,19 @@
         <option value="$PROJECT_DIR$/fxcm_data_manager/source/db_setup.py" />
         <option value="$PROJECT_DIR$/fxcm_data_manager/db_setup/db_setup.py" />
         <option value="C:/ProgramData/Anaconda3/Lib/site-packages/fxcmpy/fxcmpy.py" />
-        <option value="$PROJECT_DIR$/fxcm_data_manager/source/database.py" />
         <option value="C:/python3/Lib/site-packages/MySQLdb/connections.py" />
         <option value="C:/python3/Lib/site-packages/pandas/io/sql.py" />
-        <option value="$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py" />
         <option value="$PROJECT_DIR$/fxcm_data_manager/source/fxcm_api.py" />
         <option value="$PROJECT_DIR$/fxcm_data_manager/data_manager.py" />
+        <option value="$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py" />
+        <option value="$PROJECT_DIR$/fxcm_data_manager/source/database.py" />
         <option value="$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
-    <option name="y" value="-11" />
+    <option name="x" value="-30" />
+    <option name="y" value="-21" />
     <option name="width" value="1346" />
     <option name="height" value="788" />
   </component>
@@ -267,19 +280,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23645681" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36567163" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32985073" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36567163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -291,21 +304,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23645681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35373133" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -353,13 +366,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/data_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1078">
@@ -650,38 +656,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py">
+    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/data_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2684">
-          <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
-          <folding>
-            <element signature="e#43#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-781">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/fxcm_api.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/data_manager.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://C:/python3/Lib/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1090" column="30" lean-forward="true" selection-start-line="1090" selection-start-column="30" selection-end-line="1090" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-          <folding>
-            <element signature="e#64#75#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/data_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#41#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/fxcm_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fxcm_data_manager/source/database_setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="128" column="44" lean-forward="true" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+          <folding>
+            <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

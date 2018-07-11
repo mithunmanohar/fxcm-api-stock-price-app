@@ -39,35 +39,14 @@ class Database:
             self.connection.rollback()
             return False
 
-    # def insert(self, query):
-    #     try:
-    #         self.cursor.execute(query)
-    #         self.connection.commit()
-    #         return True
-    #     except Exception as e:
-    #         print (query)
-    #         print (traceback.print_exc())
-    #         self.connection.rollback()
-    #         return False
-    #
-    # def update(self, query):
-    #     try:
-    #         self.cursor.execute(query)
-    #         self.connection.commit()
-    #         return True
-    #     except Exception as e:
-    #         print (query)
-    #         print (traceback.print_exc())
-    #         self.connection.rollback()
-    #         return False
 
     def run_query(self, query):
         cursor = self.connection.cursor(MySQLdb.cursors.DictCursor )
         cursor.execute(query)
         return cursor.fetchall()
 
-    # def __del__(self):
-    #     self.connection.close()
+    def __del__(self):
+        self.connection.close()
 
 
 if __name__ == "__main__":

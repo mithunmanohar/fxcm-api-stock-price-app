@@ -9,3 +9,6 @@ data_managerpy --add_time_frame {time_frame_name}  - adds a new time frame to da
 
 data_manager.py --update_all_data - Updates all the data in the data base for all time-periods and currency pairs with latest available data
 
+c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2017-02-25 00:00" --e_d "2018-02-25 00:00" -- throws an error as 1 year data is not available !
+
+c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25" --> use this to update individual timeframe and currency pair
