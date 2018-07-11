@@ -1,4 +1,4 @@
-# fxcm-api-stock-price-database
+# fxcm-api-stock-price-app
 
 FXCM, also known as Forex Capital Markets, is a retail foreign exchange broker. This A python fxcm api wrapper that connects to fxcm api and stores data in a local mysql data base. This database can be used coonect to excel using excel-MySql connector to do further analysis.
 
