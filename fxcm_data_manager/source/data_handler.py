@@ -2,9 +2,7 @@
 # Global imports
 import datetime as dt
 import fxcmpy
-import sys
 from source.database import Database
-from source import fxcm_api
 
 class Fxcm:
     def __init__(self):
