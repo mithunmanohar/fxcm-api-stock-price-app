@@ -97,6 +97,10 @@ class Fxcm:
                         try:
                             now = dt.datetime.now()
                             strt = dt.datetime(2000, 1, 1)
+                            if t_f in ["m15", "H1", "H4"]:
+                                strt = dt.datetime(2018, 1, 1)
+                            elif t_f in ["D1", "W1", "M1"]:
+                                strt = dt.datetime(1994, 1, 1)
                             query = """select date_time from %s where currency_pair='%s' order by date_time desc limit 1""" % (timeframe, currency_pair)
                             date_ = self.db_conn.run_query(query)
                             if date_:
@@ -119,6 +123,10 @@ class Fxcm:
                 except Exception as e:
                     continue
         else:
+            c_p = c_p.strip()
+            c_p = c_p.split(",")
+            t_f = t_f.strip()
+            t_f = t_f.split(",")
             print("[INFO] Connecting to fxcm api")
             api_conn = fxcmpy.fxcmpy(config_file=".\\fxcm.cfg", log_level='error', server='real')
             print("[INFO] Connected to fxcm api ")
@@ -137,8 +145,10 @@ class Fxcm:
             else:
                 try:
                     print("[INFO] Updating database for % s, %s, %s, %s" % (c_p, t_f, s_date, e_date))
-                    ts_data = api_conn.get_candles(c_p, start=s_date, end=e_date, period=t_f)
-                    self.update_database(c_p, t_f, ts_data)
+                    for time_f in t_f:
+                        for pair in c_p:
+                            ts_data = api_conn.get_candles(pair, start=s_date, end=e_date, period=time_f)
+                            self.update_database(pair, time_f, ts_data)
                 except Exception as e:
                     print("[ERROR] Error occured. Error in api connection %s for %s, %s" % (e, c_p, t_f))
 

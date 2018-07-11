@@ -97,11 +97,13 @@ def create_tf_tables(table_name):
                 table_name = '%s'""") % table_name
     if not db.run_query(query):
         query = """CREATE TABLE %s (
-               currency_pair VARCHAR(100),date_time DATETIME ,bidopen float(8,3),\
+               id int(11) NOT NULL AUTO_INCREMENT,
+               currency_pair VARCHAR(100), date_time DATETIME, bidopen float(8,3),\
                bidclose float(8,3), bidhigh float(8,3), bidlow float(8,3),\
                askopen float(8,3), askclose  float(8,3), askhigh float(8,3),\
                asklow float(8,3), tickqty int(12),
-               UNIQUE unique_index (currency_pair, date_time))""" % table_name
+               UNIQUE unique_index (currency_pair, date_time),
+               primary key (id))""" % table_name
         if db.execute_query(query):
             print("[INFO] Created table %s" % table_name)
         else:

@@ -11,4 +11,12 @@ data_manager.py --update_all_data - Updates all the data in the data base for al
 
 c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2017-02-25 00:00" --e_d "2018-02-25 00:00" -- throws an error as 1 year data is not available !
 
-c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25" --> use this to update individual timeframe and currency pair
+Custom update:  use these methods to update individual timeframe and currency pair
+
+one time frame one time frame : c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25" --> use this to update individual timeframe and currency pair
+
+one time frame, multiple currecy pair - c:python3\python.exe data_manager.py --update --t_f "m15" --c_p "EUR/USD,XAG/USD" --s_d "2018-02-25" --e_d "2018-03-25"
+multiple time frame, one currecy pair - c:python3\python.exe data_manager.py --update --t_f "m15,H4" --c_p "EUR/USD" --s_d "2018-02-25" --e_d "2018-03-25"
+multiple time frame, multiple currency - c:python3\python.exe data_manager.py --update --t_f "m15,H4" --c_p "NZD/USD,GBP/USD" --s_d "2018-02-25" --e_d "2018-03-25"
+
+
